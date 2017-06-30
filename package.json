@@ -1,0 +1,14 @@
+{
+  "name": "t",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "tsc && echo 'Running code transpiled from CLI:' && node dist/direct.js && node dist/tsc.js && echo '\nRunning code transpiled using the typescript package:' && node dist/transpiled.js"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.6",
+    "class-transformer": "^0.1.7",
+    "reflect-metadata": "^0.1.10",
+    "typescript": "^2.4.1"
+  }
+}
