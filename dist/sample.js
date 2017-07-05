@@ -54,4 +54,4 @@ var classedUser = class_transformer_1.plainToClass(User, exports.plainUser);
 console.log("classedUser is instance of User?", classedUser instanceof User);
 console.log("classedUser.weapons is instance of Map?", classedUser.weapons instanceof Map);
 console.log("classedUser.weapons is instance of Weapon?", classedUser.weapons instanceof Weapon);
-//# sourceMappingURL=direct.js.map
+//# sourceMappingURL=sample.js.map

@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "test": "tsc && echo 'Running code transpiled from CLI:' && node dist/direct.js && node dist/tsc.js && echo '\nRunning code transpiled using the typescript package:' && node dist/transpiled.js"
+    "test": "ts-node ./transpile.ts && echo 'Running code transpiled using the typescript package:' && node ./dist/transpiled && ts-node ./program.ts && echo '\nRunning code transpiled from Program:' && node dist/sample.js"
   },
   "dependencies": {
     "@types/node": "^8.0.6",
     "class-transformer": "^0.1.7",
     "reflect-metadata": "^0.1.10",
+    "ts-node": "^3.1.0",
     "typescript": "^2.4.1"
   }
 }
