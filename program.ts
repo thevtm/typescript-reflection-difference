@@ -9,7 +9,11 @@ const compilerConfig: ts.ParsedCommandLine = ts.parseJsonConfigFileContent(confi
 
 // Compile
 const program = ts.createProgram(compilerConfig.fileNames, compilerConfig.options)
-let emitResult = program.emit()
+let emitResult = program.emit(program.getSourceFile('sample.ts'),
+//(fileName: string, data: string, writeByteOrderMark: boolean, onError?: (message: string) => void, sourceFiles?: ts.SourceFile[]): void
+  (fileName: string, data: string, writeByteOrderMark: boolean) => {
+    console.log(fileName, data)
+  })
 
 // Error messages
 let allDiagnostics = ts.getPreEmitDiagnostics(program).concat(emitResult.diagnostics)

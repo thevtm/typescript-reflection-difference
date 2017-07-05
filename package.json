@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "test": "ts-node ./transpile.ts && echo 'Running code transpiled using the typescript package:' && node ./dist/transpiled && ts-node ./program.ts && echo '\nRunning code transpiled from Program:' && node dist/sample.js"
+    "test": "ts-node ./program.ts"
   },
   "dependencies": {
     "@types/node": "^8.0.6",
